@@ -15,8 +15,7 @@ const buttonTypeArray = [
 ];
 
 export const Button = ({ label, type }: ButtonProps) => {
-  // const className = `bg-button-${type}-active hover:bg-button-${type}-hover`;
-  const className = `bg-${type}`;
+  const className = `bg-background-button-${type}-enabled hover:bg-background-button-primary-hover active:bg-background-button-primary-pressed`;
   return <button className={className}>{label}</button>;
 };
 

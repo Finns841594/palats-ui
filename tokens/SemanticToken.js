@@ -1,30 +1,18 @@
+import { GlobalToken } from './GlobalToken';
+
 export const SemanticToken = {
   color: {
     background: {
       button: {
+        disabled: GlobalToken.colors.greyish[100],
         primary: {
-          active: 'palats-500',
-          pressed: 'palats-700',
-          hover: 'palats-600',
-        },
-        secondary: {
-          active: 'palats-500',
-          pressed: 'palats-700',
-          hover: 'palats-600',
-        },
-      },
-      buttonTwo: {
-        primary: {
-          active: 'palats-500',
-          pressed: 'palats-700',
-          hover: 'palats-600',
-        },
-        secondary: {
-          active: 'palats-500',
-          pressed: 'palats-700',
-          hover: 'palats-600',
+          enabled: GlobalToken.colors.palats[500],
+          pressed: GlobalToken.colors.palats[700],
+          hover: GlobalToken.colors.palats[600],
         },
       },
     },
+    icon: {},
+    label: {},
   },
 };
