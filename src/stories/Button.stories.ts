@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../components/Button';
+import { Button, buttonTypeArray } from '../components/Button';
 
 const meta = {
   title: 'Button',
@@ -8,7 +8,7 @@ const meta = {
     layout: 'centered',
   },
   argTypes: {
-    type: { control: 'select', options: ['primary', 'secondary'] },
+    type: { control: 'select', options: buttonTypeArray },
     label: { control: 'text' },
   },
 } satisfies Meta<typeof Button>;
@@ -23,9 +23,10 @@ export const Primary: Story = {
   },
 };
 
-// export const Error: Story = {
-//   args: {
-//     label: 'Error',
-//     type: button.error.background-enabled,
-//   },
-// };
+export const Secondary: Story = {
+  args: {
+    label: 'Button',
+    type: 'secondary',
+  },
+};
+

@@ -6,6 +6,7 @@ module.exports = {
   safelist: [
     {
       pattern: /^(.*?)/,
+      variants: ['hover', 'focus', 'active'],
     },
   ],
   theme: {
