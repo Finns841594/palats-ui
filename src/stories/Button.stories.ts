@@ -23,9 +23,10 @@ export const Primary: Story = {
   },
 };
 
-// export const Error: Story = {
-//   args: {
-//     label: 'Error',
-//     type: button.error.background-enabled,
-//   },
-// };
+export const Secondary: Story = {
+  args: {
+    label: 'Button',
+    type: 'secondary',
+  },
+};
+

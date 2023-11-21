@@ -15,7 +15,8 @@ const buttonTypeArray = [
 ];
 
 export const Button = ({ label, type }: ButtonProps) => {
-  const className = `bg-background-button-${type}-enabled hover:bg-background-button-primary-hover active:bg-background-button-primary-pressed`;
+  
+  const className = `px-3 bg-background-button-${type}-enabled hover:bg-background-button-${type}-hover active:bg-background-button-${type}-pressed`;
   return <button className={className}>{label}</button>;
 };
 
@@ -23,6 +24,7 @@ Button.defaultProps = {
   label: 'Button',
   type: 'primary',
 };
+
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.oneOf(buttonTypeArray).isRequired,

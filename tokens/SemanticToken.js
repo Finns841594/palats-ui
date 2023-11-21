@@ -10,9 +10,14 @@ export const SemanticToken = {
           pressed: GlobalToken.colors.palats[700],
           hover: GlobalToken.colors.palats[600],
         },
+        secondary: {
+          enabled: GlobalToken.colors.greyish[100],
+          pressed: GlobalToken.colors.greyish[200],
+          hover: GlobalToken.colors.greyish[700],
+        },
       },
     },
-    icon: {},
-    label: {},
+    icon: {button:{primary:{enabled:GlobalToken.colors.base.white[500]}}},
+    label: {button:{primary:{enabled:GlobalToken.colors.base.white[500]}}},
   },
 };
