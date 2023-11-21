@@ -2,10 +2,10 @@ export const GlobalToken = {
   colors: {
     base: {
       black:{
-        500: '#ffffff',
+        500: '#000000',
       },
       white:{
-        500: '#000000',
+        500: '#ffffff',
       }
     },
     greyish: {
