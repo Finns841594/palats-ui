@@ -4,34 +4,34 @@ export const SemanticToken = {
   color: {
     background: {
       surface: {
-        primary: GlobalToken.colors.greyish[950],
+        primary: GlobalToken.colors.base[500],
         success: GlobalToken.colors.green[50],
         danger: GlobalToken.colors.red[50],
       },
       button: {
         success: {
-          enabled: GlobalToken.colors.green[200],
-          pressed: GlobalToken.colors.green[700],
-          hover: GlobalToken.colors.green[100],
+          pressed: GlobalToken.colors.green[100],
+          hover: GlobalToken.colors.green[50],
+          enabled: GlobalToken.colors.green[500],
         },
         secondary: {
-          enabled: GlobalToken.colors.palats[200],
-          pressed: GlobalToken.colors.palats[800],
-          hover: GlobalToken.colors.palats[100],
+          enabled: GlobalToken.colors.base.white[500],
+          pressed: GlobalToken.colors.palats[100],
+          hover: GlobalToken.colors.palats[50],
         },
         disabled: {
           disabled: GlobalToken.colors.greyish[100],
         },
         system: {
-          selected: GlobalToken.colors.greyish[800],
-          pressed: GlobalToken.colors.greyish[800],
-          hover: GlobalToken.colors.greyish[800],
-          enabled: GlobalToken.colors.greyish[200],
+          selected: GlobalToken.colors.greyish[200],
+          pressed: GlobalToken.colors.greyish[200],
+          hover: GlobalToken.colors.greyish[100],
+          enabled: GlobalToken.colors.base.white[500],
         },
         danger: {
+          pressed: GlobalToken.colors.red[100],
           enabled: GlobalToken.colors.red[50],
-          pressed: GlobalToken.colors.red[900],
-          hover: GlobalToken.colors.red[100],
+          hover: GlobalToken.colors.red[50],
         },
         primary: {
           enabled: GlobalToken.colors.palats[500],
