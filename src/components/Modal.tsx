@@ -67,14 +67,14 @@ export const Modal = ({
 };
 
 Modal.defaultProps = {
-  label: 'Button',
   type: 'primary',
-  size: 'md',
-  iconPosition: 'start',
+  state: 1,
   buttonOneLabel: 'Click',
 };
 
 Modal.propTypes = {
-  state: PropTypes.oneOf([1, 2]),
-  type: PropTypes.oneOf(modalTypeArray),
+  type: PropTypes.oneOf(modalTypeArray).isRequired,
+  state: PropTypes.oneOf([1, 2]).isRequired,
+  buttonOneLabel: PropTypes.string.isRequired,
+  buttonTwoLabel: PropTypes.string,
 };
