@@ -6,7 +6,7 @@ export interface ButtonProps {
   label: string;
   type: string;
   size?: string;
-  Icon?: SVGProps<SVGSVGElement>;
+  icon?: any;
   iconPosition?: string;
   onClickFn?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -25,7 +25,7 @@ export const Button = ({
   label,
   type,
   size,
-  Icon,
+  icon,
   iconPosition = 'start',
   onClickFn,
 }: ButtonProps) => {
@@ -71,8 +71,8 @@ export const Button = ({
     <button className={buttonClassName.area} onClick={onClickFn}>
       <div className={buttonClassName.border}>
         <div className={buttonClassName.leftIcon}>
-          {Icon && iconPosition === 'start' ? (
-            <Icon type={type} {...props} />
+          {icon && iconPosition === 'start' ? (
+            icon
           ) : (
             <TrailingIcon type={type} flip={true} />
           )}
@@ -81,10 +81,10 @@ export const Button = ({
           <div className={buttonClassName.label}>{label}</div>
         </div>
         <div className={buttonClassName.rightIcon}>
-          {Icon && iconPosition === 'end' ? (
-            <Icon type={type} {...props} />
+          {icon && iconPosition === 'end' ? (
+            icon
           ) : (
-            <TrailingIcon type={type} />
+            <TrailingIcon type={type} flip={true} />
           )}
         </div>
       </div>

@@ -4,7 +4,7 @@ export const SemanticToken = {
   color: {
     background: {
       surface: {
-        primary: GlobalToken.colors.base[500],
+        primary: GlobalToken.colors.base.white[500],
         success: GlobalToken.colors.green[50],
         danger: GlobalToken.colors.red[50],
       },
