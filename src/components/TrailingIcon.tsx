@@ -1,11 +1,22 @@
 interface TrailingIconProps {
   type: string;
-  start?: boolean;
+  flip?: boolean;
 }
-export const TrailingIcon = ({type, start=false} : TrailingIconProps) => {
-  
+export const TrailingIcon = ({ type, flip = false }: TrailingIconProps) => {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill={`bg-icon-button-${type} bg-icon-button-${type}-enabled hover:bg-icon-button-${type}-hover`} xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31658 8.90237 7.68342 9.29289 7.29289C9.68342 6.90237 10.3166 6.90237 10.7071 7.29289L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z" fill={`bg-icon-button-${type}`} transform={start ? "rotate(180 12 12)" : undefined}/>
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31658 8.90237 7.68342 9.29289 7.29289C9.68342 6.90237 10.3166 6.90237 10.7071 7.29289L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"
+        transform={flip ? 'rotate(180 12 12)' : undefined}
+      />
     </svg>
-)}
+  );
+};

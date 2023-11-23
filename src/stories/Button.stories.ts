@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button, buttonTypeArray } from '../components/Button';
+import { DeleteIcon } from '../components/DeleteIcon';
 
 const meta = {
   title: 'Button',
@@ -12,7 +13,7 @@ const meta = {
     label: { control: 'text' },
     size: { control: 'select', options: ['sm', 'md'] },
     iconPosition: { control: 'select', options: ['start', 'end'] },
-    onClickFn: { action: 'clicked' }
+    onClickFn: { action: 'clicked' },
   },
 } satisfies Meta<typeof Button>;
 
@@ -33,3 +34,10 @@ export const Secondary: Story = {
   },
 };
 
+export const WithStartIcon: Story = {
+  args: {
+    label: 'Button',
+    type: 'primary',
+    icon: DeleteIcon,
+  },
+};
