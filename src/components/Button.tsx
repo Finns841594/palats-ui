@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 import { TrailingIcon } from './TrailingIcon';
-import { SVGProps } from 'react';
 
 export interface ButtonProps {
   label: string;
   type: string;
   size?: string;
-  Icon?: SVGProps<SVGSVGElement>;
+  Icon?: any;
   iconPosition?: string;
   onClickFn?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -72,7 +71,7 @@ export const Button = ({
       <div className={buttonClassName.border}>
         <div className={buttonClassName.leftIcon}>
           {Icon && iconPosition === 'start' ? (
-            <Icon type={type} {...props} />
+             <Icon className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}/>
           ) : (
             <TrailingIcon type={type} flip={true} />
           )}
@@ -82,7 +81,7 @@ export const Button = ({
         </div>
         <div className={buttonClassName.rightIcon}>
           {Icon && iconPosition === 'end' ? (
-            <Icon type={type} {...props} />
+            <Icon className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}/>
           ) : (
             <TrailingIcon type={type} />
           )}

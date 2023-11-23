@@ -38,6 +38,6 @@ export const WithStartIcon: Story = {
   args: {
     label: 'Button',
     type: 'primary',
-    icon: DeleteIcon,
+    Icon: DeleteIcon,
   },
 };
