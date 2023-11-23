@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Button } from './components/Button';
 import { DeleteIcon } from './components/DeleteIcon';
+import Modal from './components/Modal';
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Button type="primary" label="click here" />
         <Button type="secondary" label="click here" Icon={DeleteIcon}/>
+        <Modal type="primary" state={1} />
+
 
         <p>
           Edit <code>src/App.tsx</code> and save to reload.

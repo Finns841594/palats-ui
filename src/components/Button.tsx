@@ -24,7 +24,7 @@ export const Button = ({
   label,
   type,
   size,
-  Icon,
+  icon,
   iconPosition = 'start',
   onClickFn,
 }: ButtonProps) => {
@@ -83,7 +83,7 @@ export const Button = ({
           {Icon && iconPosition === 'end' ? (
             <Icon className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}/>
           ) : (
-            <TrailingIcon type={type} />
+            <TrailingIcon type={type} flip={true} />
           )}
         </div>
       </div>
