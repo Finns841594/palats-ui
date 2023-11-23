@@ -94,8 +94,8 @@ export const SemanticToken = {
         success: GlobalToken.colors.green[700],
       },
       button: {
-        primary: 'transparent',
-        disabled: 'transparent',
+        primary: GlobalToken.colors.palats[500],
+        disabled: GlobalToken.colors.greyish[100],
         success: GlobalToken.colors.green[200],
         secondary: GlobalToken.colors.palats[200],
         system: GlobalToken.colors.greyish[200],

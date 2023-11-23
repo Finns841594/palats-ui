@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import { Button } from './Button';
 interface ModalProps {
   type: string;
-  state: number;
+  state?: number;
+  buttonOneLabel: string;
+  buttonTwoLabel?: string;
 }
 
 export const modalTypeArray = [
@@ -15,18 +16,28 @@ export const modalTypeArray = [
   'disabled',
 ];
 
-export const Modal = ({ type, state }: ModalProps) => {
+export const Modal = ({
+  type,
+  state = 1,
+  buttonOneLabel,
+  buttonTwoLabel,
+}: ModalProps) => {
   const backgroundColor = `bg-background-surface-${type}`;
-  const textClasses = `text-text-surface-${type} text-fontSize-headline-md`;
+  const headlineClasses = `text-text-surface-${type} text-headline-md`;
+  const textClasses = `text-text-surface-${type} text-text-md`;
 
   const classNames = {
     area: [
-      'w-[380px] h-44 p-4 rounded-lg shadow flex-col justify-start items-start gap-4 inline-flex',
+      'w-[600px] h-[400px] p-4 rounded-lg shadow-modal flex-col justify-start items-start gap-4 inline-flex',
       backgroundColor,
     ].join(' '),
     headerContainer: 'self-stretch justify-start items-start gap-4 inline-flex',
     header: [
-      "grow shrink basis-0 font-bold font-['Open Sans'] leading-normal",
+      'grow shrink basis-0 leading-normal text-start',
+      headlineClasses,
+    ].join(' '),
+    text: [
+      'self-stretch leading-normal text-start h-[260px]',
       textClasses,
     ].join(' '),
   };
@@ -36,25 +47,18 @@ export const Modal = ({ type, state }: ModalProps) => {
         <div className={classNames.header}>Headline</div>
       </div>
 
-      <div className="self-stretch text-gray-800 text-base font-normal font-['Open Sans'] leading-normal">
-        Text
-      </div>
+      <div className={classNames.text}>Text</div>
 
-      <div className="w-2 h-2 relative">
-        <div className="w-2 h-2 left-0 top-0 absolute shadow"></div>
-      </div>
-
-      <div className="self-stretch justify-start items-start inline-flex">
+      <div className="self-stretch justify-start items-start gap-4 inline-flex">
         <div className="grow shrink basis-0 h-7"></div>
-
-        <div className="justify-start items-start flex">
-          {state === 1 ? (
-            <Button type="primary" />
-          ) : (
+        <div className="self-stretch justify-start items-start gap-8 inline-flex px-4">
+          {state === 2 ? (
             <>
-              <Button type="primary" />
-              <Button type="secondary" />
+              <Button type="secondary" label={buttonTwoLabel} />
+              <Button type={type} label={buttonOneLabel} />
             </>
+          ) : (
+            <Button type={type} label={buttonOneLabel} />
           )}
         </div>
       </div>
@@ -67,10 +71,10 @@ Modal.defaultProps = {
   type: 'primary',
   size: 'md',
   iconPosition: 'start',
+  buttonOneLabel: 'Click',
 };
 
 Modal.propTypes = {
   state: PropTypes.oneOf([1, 2]),
   type: PropTypes.oneOf(modalTypeArray),
 };
-export default Modal;

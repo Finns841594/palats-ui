@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Button } from './components/Button';
 import { DeleteIcon } from './components/DeleteIcon';
-import Modal from './components/Modal';
+import { Modal } from './components/Modal';
 
 function App() {
   return (
@@ -10,9 +10,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Button type="primary" label="click here" />
-        <Button type="secondary" label="click here" Icon={DeleteIcon}/>
-        <Modal type="primary" state={1} />
-
+        <Button type="secondary" label="click here" Icon={DeleteIcon} />
+        <Modal type="success" state={2} buttonOneLabel="First" />
 
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
