@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Button type="primary" label="here" />
-        <Button type="secondary" label="here" />
+        <Button type="primary" label="click here" />
+        <Button type="secondary" label="click here" Icon={DeleteIcon}/>
         <Modal type="primary" state={1} />
-        {/* <Button type="primary" label="icon" icon={<DeleteIcon />} /> */}
+
 
         <p>
           Edit <code>src/App.tsx</code> and save to reload.

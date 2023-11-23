@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 import { TrailingIcon } from './TrailingIcon';
-import { SVGProps } from 'react';
 
 export interface ButtonProps {
   label: string;
   type: string;
   size?: string;
-  icon?: any;
+  Icon?: any;
   iconPosition?: string;
   onClickFn?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -71,8 +70,8 @@ export const Button = ({
     <button className={buttonClassName.area} onClick={onClickFn}>
       <div className={buttonClassName.border}>
         <div className={buttonClassName.leftIcon}>
-          {icon && iconPosition === 'start' ? (
-            icon
+          {Icon && iconPosition === 'start' ? (
+             <Icon className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}/>
           ) : (
             <TrailingIcon type={type} flip={true} />
           )}
@@ -81,8 +80,8 @@ export const Button = ({
           <div className={buttonClassName.label}>{label}</div>
         </div>
         <div className={buttonClassName.rightIcon}>
-          {icon && iconPosition === 'end' ? (
-            icon
+          {Icon && iconPosition === 'end' ? (
+            <Icon className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}/>
           ) : (
             <TrailingIcon type={type} flip={true} />
           )}
