@@ -12,7 +12,7 @@ export const SemanticToken = {
         success: {
           pressed: GlobalToken.colors.green[100],
           hover: GlobalToken.colors.green[50],
-          enabled: GlobalToken.colors.green[500],
+          enabled: GlobalToken.colors.base.white[500],
         },
         secondary: {
           enabled: GlobalToken.colors.base.white[500],
@@ -59,7 +59,9 @@ export const SemanticToken = {
         danger: GlobalToken.colors.red[700],
       },
       button: {
-        primary: GlobalToken.colors.base.white[500],
+        primary: {
+          enabled: GlobalToken.colors.base.white[500]
+        },
         success: GlobalToken.colors.green[700],
         secondary: GlobalToken.colors.palats[800],
         system: {
@@ -70,7 +72,6 @@ export const SemanticToken = {
         },
         danger: GlobalToken.colors.red[900],
         disabled: GlobalToken.colors.greyish[600],
-
       },
     },
     label: {
@@ -95,6 +96,8 @@ export const SemanticToken = {
         success: GlobalToken.colors.green[700],
       },
       button: {
+        primary: 'transparent',
+        disabled: 'transparent',
         success: GlobalToken.colors.green[200],
         secondary: GlobalToken.colors.palats[200],
         system: GlobalToken.colors.greyish[200],
@@ -102,4 +105,120 @@ export const SemanticToken = {
       },
     },
   },
+  font : {
+    fontFamily: '"Open Sans"',
+    fontSize: {
+      text: {
+      'lg': ['1rem', {
+        fontWeight: '400',
+        lineHeight: '1.5rem',}],
+      'lg-link': ['1rem', {
+        fontWeight: '400',
+        lineHeight: '1.5rem',
+      }],
+      'md': ['0.875rem', {
+        fontWeight: '400',
+        lineHeight: '1.25rem',}],
+      'md-link': ['0.875rem', {
+        fontWeight: '400',
+        lineHeight: '1.25rem',
+        textDecoration: 'underline'}],
+      },
+      caption: {
+        'sm': ['0.75rem', {
+          fontWeight: '400',
+          lineHeight: '1.125rem',}],
+        'sm-link': ['0.75rem', {
+          fontWeight: '400',
+          lineHeight: '1.125rem',
+          textDecoration: 'underline'}],
+      },
+      menu: {
+        'md': ['0.875rem', {
+          fontWeight: '400',
+          lineHeight: '1.5rem',}],
+        'md-selected': ['0.875rem', {
+          fontWeight: '600',
+          lineHeight: '1.5rem',
+          letterSpacing: '-0.00875rem'}],
+      },
+      button: {
+        'md': ['0.875rem', {
+          fontWeight: '600',
+          lineHeight: '1.5rem',
+          letterSpacing: '-0.00875rem'}],
+        'sm': ['0.875rem', {
+          fontWeight: '500',
+          lineHeight: '1.5rem',
+          letterSpacing: '-0.00875rem'}],
+      },
+      headline: {
+        '2xl': ['1.875rem', {
+          fontWeight: '600',
+          lineHeight: '2.25rem',}],
+        '2xl-light': ['1.875rem', {
+          fontWeight: '400',
+          lineHeight: '2.25rem',}],
+        'xl': ['1.5rem', {
+          fontWeight: '600',
+          lineHeight: '2rem',}],
+        'xl-light': ['1.5rem', {
+          fontWeight: '400',
+          lineHeight: '2rem',}],
+        'lg': ['1.25rem', {
+          fontWeight: '600',
+          lineHeight: '1.75rem',}],
+        'md': ['1rem', {
+          fontWeight: '700',
+          lineHeight: '1.5rem',}],
+        'sm': ['0.875rem', {
+          fontWeight: '700',
+          lineHeight: '1.25rem',}],
+      },
+      labels: {
+        lg: ['1rem', {
+          fontWeight: '600',
+          lineHeight: '1.5rem',
+          letterSpacing: '0.05rem'}],
+        md: ['0.875rem', {
+          fontWeight: '400',
+          lineHeight: '1.25rem',}],
+      },
+      input: {
+        md: ['0.875rem', {
+          fontWeight: '400',
+          lineHeight: '1.5rem',}],
+      },
+      tabs: {
+        md: ['0.875rem', {
+          fontWeight: '500',
+          lineHeight: '1.25rem',}]
+      },
+      table: {
+        'md': ['0.875rem', {
+          fontWeight: '400',
+          lineHeight: '1.25rem',}],
+        'md-highlighted': ['0.875rem', {
+          fontWeight: '500',
+          lineHeight: '1.25rem',}],
+      },
+    },
+    textDecoration: {
+      text: {
+        'lg-link': {textDecoration: 'underline'},
+        'md-link': {textDecoration: 'underline'},
+        },
+      caption: {
+          'sm-link': {textDecoration: 'underline'},
+        },
+      labels: {
+          lg: {'text-transform': 'uppercase'},
+          md: {'text-transform': 'uppercase'},
+        }
+    }
+  },
+  shadow : {
+    surface: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+    modal: '0 25px 50px -12px rgb(0 0 0 / 0.25)'
+  }
 };

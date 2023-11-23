@@ -10,6 +10,9 @@ const meta = {
   argTypes: {
     type: { control: 'select', options: buttonTypeArray },
     label: { control: 'text' },
+    size: { control: 'select', options: ['sm', 'md'] },
+    iconPosition: { control: 'select', options: ['start', 'end'] },
+    onClickFn: { action: 'clicked' }
   },
 } satisfies Meta<typeof Button>;
 

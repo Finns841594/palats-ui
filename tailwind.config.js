@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import { SemanticToken } from './tokens/SemanticToken';
+import { toFlatObject } from './utils/toFlatObject';
 
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -10,8 +11,14 @@ module.exports = {
     },
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: SemanticToken.shadow
+    },
     colors: SemanticToken.color,
+    fontFamily: {
+      'sans': [SemanticToken.font.fontFamily, "Roboto"],
+    },
+    fontSize: toFlatObject(SemanticToken.font.fontSize),
     plugins: [],
   },
 };
