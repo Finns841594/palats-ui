@@ -1,3 +1,4 @@
+import { SVGProps } from 'react';
 interface DeleteIconProps {
   type?: string;
   flip?: boolean;
@@ -5,7 +6,7 @@ interface DeleteIconProps {
 export const DeleteIcon = ({
   type = 'primary',
   flip = false,
-}: DeleteIconProps) => {
+}: DeleteIconProps): SVGProps<SVGSVGElement> => {
   return (
     <svg
       width="24"
