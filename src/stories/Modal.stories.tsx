@@ -16,6 +16,8 @@ const meta = {
     state: { control: 'radio', options: [1, 2] },
     buttonOneLabel: { control: 'button 1' },
     buttonTwoLabel: { control: 'button 2' },
+    buttonOneOnClick: { action: 'clicked' },
+    buttonTwoOnClick: { action: 'clicked' },
   },
 } satisfies Meta<typeof Modal>;
 
