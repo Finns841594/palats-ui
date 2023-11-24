@@ -3,8 +3,12 @@ import { Button } from './Button';
 interface ModalProps {
   type: string;
   state?: number;
+  headline: string;
+  text: string;
   buttonOneLabel: string;
+  buttonOneOnClick: React.MouseEventHandler<HTMLButtonElement>;
   buttonTwoLabel?: string;
+  buttonTwoOnClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export const modalTypeArray = [
@@ -19,8 +23,12 @@ export const modalTypeArray = [
 export const Modal = ({
   type,
   state,
+  headline,
+  text,
   buttonOneLabel,
+  buttonOneOnClick,
   buttonTwoLabel,
+  buttonTwoOnClick,
 }: ModalProps) => {
   const backgroundColor = `bg-background-surface-${type}`;
   const headlineClasses = `text-text-surface-${type} text-headline-md`;
@@ -40,25 +48,40 @@ export const Modal = ({
       'self-stretch leading-normal text-start h-[260px]',
       textClasses,
     ].join(' '),
+    buttonContainer: 'self-stretch justify-start items-start inline-flex',
+    buttonPlaceHolder: 'grow shrink basis-0 h-7',
+    buttonsBlock: 'self-stretch justify-start items-start gap-8 inline-flex',
   };
   return (
     <div className={classNames.area}>
       <div className={classNames.headerContainer}>
-        <div className={classNames.header}>Headline</div>
+        <div className={classNames.header}>{headline}</div>
       </div>
 
-      <div className={classNames.text}>Text</div>
+      <div className={classNames.text}>{text}</div>
 
-      <div className="self-stretch justify-start items-start gap-4 inline-flex">
-        <div className="grow shrink basis-0 h-7"></div>
-        <div className="self-stretch justify-start items-start gap-8 inline-flex px-4">
+      <div className={classNames.buttonContainer}>
+        <div className={classNames.buttonPlaceHolder}></div>
+        <div className={classNames.buttonsBlock}>
           {state === 2 ? (
             <>
-              <Button type="secondary" label={buttonTwoLabel} />
-              <Button type={type} label={buttonOneLabel} />
+              <Button
+                type="secondary"
+                label={buttonTwoLabel}
+                onClickFn={buttonTwoOnClick}
+              />
+              <Button
+                type={type}
+                label={buttonOneLabel}
+                onClickFn={buttonOneOnClick}
+              />
             </>
           ) : (
-            <Button type={type} label={buttonOneLabel} />
+            <Button
+              type={type}
+              label={buttonOneLabel}
+              onClickFn={buttonOneOnClick}
+            />
           )}
         </div>
       </div>
@@ -69,12 +92,17 @@ export const Modal = ({
 Modal.defaultProps = {
   type: 'primary',
   state: 1,
+  headline: 'Headline',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ad facilis blanditiis, aliquid repellendus quia dicta debitis enim illo culpa?',
   buttonOneLabel: 'Click',
+  buttonOneOnClick: () => null,
 };
 
 Modal.propTypes = {
   type: PropTypes.oneOf(modalTypeArray).isRequired,
   state: PropTypes.oneOf([1, 2]).isRequired,
+  headline: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   buttonOneLabel: PropTypes.string.isRequired,
   buttonTwoLabel: PropTypes.string,
 };

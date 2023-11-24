@@ -40,10 +40,12 @@ export const Button = ({
       backgroundColor,
       borderSettings,
     ].join(' '),
-    leftIcon: 'w-6 h-6 relative',
+    leftIcon:
+      (Icon && iconPosition === 'start') || !Icon ? 'w-6 h-6 relative' : '',
     labelDiv: 'px-2 py-0.5 justify-start items-start gap-2 flex',
     label: text,
-    rightIcon: 'w-6 h-6 relative',
+    rightIcon:
+      (Icon && iconPosition === 'end') || !Icon ? 'w-6 h-6 relative' : '',
   };
   const buttonClassNamesSM = {
     area: 'w-[88px] h-8 justify-start items-start inline-flex',
@@ -52,7 +54,8 @@ export const Button = ({
       backgroundColor,
       borderSettings,
     ].join(' '),
-    leftIcon: 'w-6 h-6 relative',
+    leftIcon:
+      (Icon && iconPosition === 'start') || !Icon ? 'w-6 h-6 relative' : '',
     labelDiv: 'px-2 py-0.5 justify-center items-center gap-2 flex',
     label: text,
     rightIcon: '',
@@ -70,10 +73,14 @@ export const Button = ({
     <button className={buttonClassName.area} onClick={onClickFn}>
       <div className={buttonClassName.border}>
         <div className={buttonClassName.leftIcon}>
-          {Icon && iconPosition === 'start' ? (
-            <Icon
-              className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}
-            />
+          {Icon ? (
+            iconPosition === 'start' ? (
+              <Icon
+                className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}
+              />
+            ) : (
+              <></>
+            )
           ) : (
             <TrailingIcon type={type} flip={true} />
           )}
@@ -82,10 +89,14 @@ export const Button = ({
           <div className={buttonClassName.label}>{label}</div>
         </div>
         <div className={buttonClassName.rightIcon}>
-          {Icon && iconPosition === 'end' ? (
-            <Icon
-              className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}
-            />
+          {Icon ? (
+            iconPosition === 'end' ? (
+              <Icon
+                className={`fill-icon-button-${type} fill-icon-button-${type}-enabled hover:fill-icon-button-${type}-hover focus:fill-icon-button-${type}-selected active:fill-icon-button-${type}-pressed`}
+              />
+            ) : (
+              <></>
+            )
           ) : (
             <TrailingIcon type={type} />
           )}

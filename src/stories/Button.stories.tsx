@@ -37,7 +37,16 @@ export const Secondary: Story = {
 export const WithStartIcon: Story = {
   args: {
     label: 'Button',
-    type: 'primary',
+    type: 'success',
     Icon: DeleteIcon,
+  },
+};
+
+export const WithEndIcon: Story = {
+  args: {
+    label: 'Button',
+    type: 'danger',
+    Icon: DeleteIcon,
+    iconPosition: 'end',
   },
 };
