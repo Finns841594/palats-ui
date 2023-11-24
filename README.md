@@ -30,12 +30,12 @@ Once setup the UI is intuitive and allows users to comprehensively check a compo
 ### Setup
 
 [How to Install Storybook](https://storybook.js.org/docs/react/get-started/install)
-Storybook has clear and easy-to-follow documentation and videos.\
+Storybook has clear and easy-to-follow documentation and videos.
 
 ### Tailwind Integration
 
 [How to Integrate Tailwind](https://storybook.js.org/recipes/tailwindcss/)
-The Storybook documentation is good but not fully comprehensive. Our fixes to various issues are below.\
+The Storybook documentation is good but not fully comprehensive. Our fixes to various issues are below.
 
 As per the documentation the tailwind css file is imported into .storybook/preview.ts to ensure tailwind styling works withing the storybook environment.
 
@@ -55,7 +55,7 @@ Please note when passing in the font-size part of the semantic token tailwind do
 
 ### Custom Fonts
 
-It is necessary to create a preview-head.html file in the storybook folder when importing custom fonts. (Storybook does not access the public/index.html file)\
+It is necessary to create a preview-head.html file in the storybook folder when importing custom fonts. (Storybook does not access the public/index.html file)
 [How to import images, assets and fonts](https://storybook.js.org/docs/react/configure/images-and-assets)
 
 ### Stories
