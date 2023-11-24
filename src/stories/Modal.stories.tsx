@@ -30,8 +30,7 @@ export const PrimaryOneButton: Story = {
     state: 1,
     headline: 'Headline',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur accusamus cupiditate distinctio maxime non quasi quo. Accusamus tempora totam voluptas!',
-    buttonOneLabel: 'First',
-    buttonOneOnClick: () => null,
+    buttonOneLabel: 'First'
   },
 };
 
@@ -42,9 +41,7 @@ export const PrimaryTwoButtons: Story = {
     headline: 'Headline',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur accusamus cupiditate distinctio maxime non quasi quo. Accusamus tempora totam voluptas!',
     buttonOneLabel: 'First',
-    buttonOneOnClick: () => null,
     buttonTwoLabel: 'Second',
-    buttonTwoOnClick: () => null,
   },
 };
 
@@ -55,6 +52,5 @@ export const SecondaryOneButton: Story = {
     headline: 'Headline',
     text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam impedit velit ut unde, atque commodi assumenda. Culpa, laborum suscipit. Omnis dolorum cumque provident quaerat, itaque, unde reprehenderit blanditiis tenetur culpa quisquam deleniti qui labore commodi vero. Enim, fugit, accusantium reprehenderit et esse optio illo assumenda mollitia doloribus ratione minima molestias?',
     buttonOneLabel: 'First',
-    buttonOneOnClick: () => null,
   },
 };
