@@ -5,6 +5,7 @@ import { DeleteIcon } from '../components/DeleteIcon';
 const meta = {
   title: 'Button',
   component: Button,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
