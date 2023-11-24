@@ -34,7 +34,7 @@ export const Button = ({
 
   // the string part of the classNames below are from Figma design file
   const buttonClassNamesMD = {
-    area: 'w-[116px] h-10 justify-start items-start inline-flex',
+    area: 'min-w-[116px] h-10 justify-start items-start inline-flex',
     border: [
       'px-2 py-1.5 rounded-lg justify-center items-center flex',
       backgroundColor,
@@ -48,7 +48,7 @@ export const Button = ({
       (Icon && iconPosition === 'end') || !Icon ? 'w-6 h-6 relative' : '',
   };
   const buttonClassNamesSM = {
-    area: 'w-[88px] h-8 justify-start items-start inline-flex',
+    area: 'min-w-[88px] h-8 justify-start items-start inline-flex',
     border: [
       'px-2 py-0.5 rounded justify-center items-center flex',
       backgroundColor,
