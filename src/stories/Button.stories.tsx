@@ -7,6 +7,9 @@ const meta = {
   component: Button,
   tags: ['autodocs'],
   parameters: {
+    docs: {
+      toc: true,
+    },
     layout: 'centered',
   },
   argTypes: {

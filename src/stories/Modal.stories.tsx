@@ -6,6 +6,9 @@ const meta = {
   component: Modal,
   tags: ['autodocs'],
   parameters: {
+    docs: {
+      toc: true,
+    },
     layout: 'centered',
   },
   argTypes: {
