@@ -18,7 +18,7 @@ export const modalTypeArray = [
 
 export const Modal = ({
   type,
-  state = 1,
+  state,
   buttonOneLabel,
   buttonTwoLabel,
 }: ModalProps) => {
