@@ -1,6 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -14,33 +11,43 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm run storybook`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches story book on localhost:6006
 
-### `npm run build`
+## Storybook 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Storybook is a frontend workshop for building UI components and pages in isolation. 
+It is used for UI development, testing and documentation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Once setup the UI is intuitive and allows users to comprehensively check a component with different states, props and inputs, seeing changes in real time. It can be used by developers and designers to test components, reduces the risk of miscommunication and helps maintain style consistency.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup
 
-### `npm run eject`
+Storybook has clear and easy-to-follow documentation and videos.
+https://storybook.js.org/docs/react/get-started/install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Tailwind Integration
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The Storybook documentation is good but not fully comprehensive.
+https://storybook.js.org/recipes/tailwindcss/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+In our Tailwind CSS configuration, we've included a `safelist` entry to explicitly whitelist the hover, focus and active class patterns. This is to ensure correct functionality in regards to dynamic styling.
+The safelist serves as a targeted solution to guarantee the accurate application of styles in the Storybook environment.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Custom Fonts
 
-## Learn More
+It is necessary to create a preview-head.html file in the storybook folder when importing custom fonts. (Storybook does not access the public/index.html file)
+https://storybook.js.org/docs/react/configure/images-and-assets
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+Setup - tailwind integration issues and fixes  
+Stories for components - prop types
+how we find to use - slow compile time
+tweaks to make it usable 
+    - custom font -> import in preview.head.html. we did it by link. if done locally has to be done using a style tag
+    - safelist in tailwind.config
+    - storybook/preview import tailwind css
+interactions - not used but potentially useful (?)
